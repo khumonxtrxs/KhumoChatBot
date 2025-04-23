@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotResponse.cs" />
+    <Compile Include="ChatBot.cs" />
+    <Compile Include="IntroPage.cs" />
+    <Compile Include="KhumoChatBot.Utils\SpeechHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
