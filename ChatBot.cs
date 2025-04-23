@@ -3,41 +3,34 @@ using KhumoChatBot.Utils;
 
 namespace KhumoChatBot
 {
-    public class ChatBot
+    public static class ChatBot
     {
-        public void Start()
+        public static void Start(string userName)
         {
-            SpeechHelper.Speak("Hello! Welcome to the KHUMO CYBER Chatbot. Please enter your name to start.");
-            Console.Write("Enter your name: ");
-            string userName = Console.ReadLine();
+            Console.Clear();
+            UIHelper.DrawBorderBox ($"💬 Welcome {userName}!");
 
-            SpeechHelper.Speak($"Alright {userName}, I'm here to help! Ask me anything about cybersecurity.");
-
+            string input = "";
             while (true)
             {
-                Console.Write("\nYou: ");
-                string input = Console.ReadLine()?.ToLower();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write($"{userName}: ");
+                Console.ResetColor();
+                input = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(input))
+                if (string.Equals(input, "exit", StringComparison.OrdinalIgnoreCase))
                 {
-                    string fallback = "I didn’t quite understand that. Could you rephrase?";
-                    Console.WriteLine($"Bot: {fallback}");
-                    SpeechHelper.Speak(fallback);
-                    continue;
-                }
-
-                if (input == "exit")
-                {
-                    string bye = "Goodbye! Stay safe online.";
-                    Console.WriteLine($"Bot: {bye}");
-                    SpeechHelper.Speak(bye);
+                    UIHelper.SyncSpeakAndType("Goodbye! Stay safe online.");
                     break;
                 }
 
-                string response = BotResponse.GetResponse(input);
-                Console.WriteLine($"Bot: {response}");
-                SpeechHelper.Speak(response);  // <---- This line speaks the response
+                string response = BotResponse.GetResponse(input.ToLower());
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("Khumo: ");
+                UIHelper.SyncSpeakAndType(response);
+                Console.ResetColor();
             }
         }
     }
 }
+

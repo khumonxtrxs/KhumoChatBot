@@ -1,16 +1,14 @@
-﻿using System;
+﻿// Program.cs
+using System;
 
 namespace KhumoChatBot
 {
-    class Program
+    public class Program
     {
-        static void Main()
+        public static void Main(string[] args)
         {
-            IntroPage.Display();
-            Console.Clear();
-
-            ChatBot chatbot = new ChatBot();
-            chatbot.Start();
+            IntroPage.Show();
+            NamePage.AskName(); // 👈 Move to name prompt after intro
         }
     }
 }

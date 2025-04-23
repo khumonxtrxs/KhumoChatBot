@@ -48,6 +48,8 @@
     <Compile Include="ChatBot.cs" />
     <Compile Include="IntroPage.cs" />
     <Compile Include="KhumoChatBot.Utils\SpeechHelper.cs" />
+    <Compile Include="KhumoChatBot.Utils\UIHelper.cs" />
+    <Compile Include="NamePage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
