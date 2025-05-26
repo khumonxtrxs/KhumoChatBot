@@ -2,14 +2,25 @@
 
 namespace KhumoChatBot.Utils
 {
-    public static class SpeechHelper
-    {
-        public static void Speak(string text)
+         /// <summary>
+        /// Utility class to handle basic text-to-speech functionality.
+        /// </summary>
+        public static class SpeechHelper
         {
-            using (SpeechSynthesizer synth = new SpeechSynthesizer())
+            /// <summary>
+            /// Speaks the provided text using the system's speech synthesizer.
+            /// This method will block until speaking is complete.
+            /// </summary>
+            /// <param name="text">The text to be spoken aloud.</param>
+            public static void Speak(string text)
             {
-                synth.Speak(text);
+                // Create a new instance of the SpeechSynthesizer
+                using (SpeechSynthesizer synth = new SpeechSynthesizer())
+                {
+                    // Speak the text synchronously (waits until done)
+                    synth.Speak(text);
+                }
             }
         }
     }
-}
+
