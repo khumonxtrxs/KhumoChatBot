@@ -127,7 +127,7 @@ namespace KhumoChatBot
                     return true;
                 }
 
-                return false; // No matching sentiment
+                return false; 
             }
         }
     }
