@@ -52,7 +52,7 @@ namespace KhumoChatBot
         /// <param name="content">The message to display in the box.</param>
         public static void DrawBorderBox(string content)
         {
-            int width = 80; // Fixed width of the box
+            int width = 80; // Adjusted width of the box
             string horizontal = new string('*', width); // Top/bottom border
 
             Console.WriteLine(horizontal); // Print top border

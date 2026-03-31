@@ -16,7 +16,7 @@ namespace KhumoChatBot
 
             UIHelper.SyncSpeakAndType($"Hi {name}, nice to meet you! Let's talk about cybersecurity.");
 
-            // Start the chatbot conversation with the name
+            // Start the chatbot conversation with the name that is added on the UIHelper.
             ChatBot.Start(name);
         }
     }
