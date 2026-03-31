@@ -32,7 +32,7 @@ namespace KhumoChatBot
             UIHelper.DrawBorderBox(asciiArt);
             Console.WriteLine();
 
-            UIHelper.SyncSpeakAndType("Hello! My name is Khumo Cyber Chatbot. Please press Enter to start chatting.");
+            UIHelper.SyncSpeakAndType("Hello There! My name is Khumo Cyber Chatbot. Please press Enter to start chatting.");
 
             Console.ResetColor();
             Console.ReadLine();
