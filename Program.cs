@@ -8,7 +8,7 @@ namespace KhumoChatBot
         public static void Main(string[] args)
         {
             IntroPage.Show();
-            NamePage.AskName(); // 👈 Move to name prompt after intro
+            NamePage.AskName(); // 👈 Moves to name prompt after intro
         }
     }
 }
