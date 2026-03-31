@@ -32,7 +32,7 @@ namespace KhumoChatBot
                 else if (input.Contains("safe browsing"))
                     return "Use HTTPS, enable 2FA, and avoid shady websites.";
 
-                // Default fallback if none of the conditions match
+                // Default fallback if none of the conditions match keywords.
                 else
                     return "I’m not sure I got that. Can you rephrase it?";
             }
